@@ -1,0 +1,72 @@
+:root{--bg:#f4f6fa;--panel:#fff;--ink:#0f1b2d;--muted:#5a6678;--brand:#1f3a68;--sun:#b8975a;--line:#d9e0ea;--on-brand:#fff;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1220;--panel:#121c2f;--ink:#e7edf6;--muted:#94a3b8;--brand:#7aa7e8;--sun:#c9a96a;--line:#24324a;--on-brand:#0b1220}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.65 'Source Sans 3',system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}.wrap{max-width:1000px;margin:0 auto;padding:4.5rem 1.25rem}.muted{color:var(--muted)}
+.nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.25rem;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav nav{display:flex;gap:1.1rem;flex-wrap:wrap;font-size:.95rem}.nav nav a{text-decoration:none;color:var(--muted)}.nav nav a:hover{color:var(--brand)}
+.logo{font-weight:800;font-size:1.3rem;text-decoration:none;color:var(--brand)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;align-items:center;min-height:80vh}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.03em;margin:.3rem 0 1rem}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;margin-bottom:1.5rem}h3{font-size:1.15rem;font-weight:700;margin-bottom:.5rem}
+.lead{font-size:1.2rem;max-width:60ch}.prose{max-width:68ch}.prose p{margin:0 0 1rem}
+.row{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.5rem 0}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;background:var(--brand);color:var(--on-brand);font-weight:600;text-decoration:none;border:2px solid var(--brand)}
+.btn.ghost{background:transparent;color:var(--brand)}.btn:hover{background:var(--sun);border-color:var(--sun);color:#0f1b2d}
+.ficha{margin:0;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:6px;padding:1.2rem 1.4rem}
+.ficha-t{font-family:ui-monospace,Menlo,monospace;font-size:.85rem;color:var(--muted);margin-bottom:.6rem}
+.ficha div{padding:.55rem 0;border-top:1px solid var(--line)}.ficha dt{font-size:.85rem;color:var(--muted)}.ficha dd{margin:0;font-weight:600}
+.group{margin-bottom:1.8rem}.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{padding:.35rem .85rem;border:1px solid var(--line);background:var(--panel);border-radius:999px;font-size:.95rem}
+.links{margin-top:1rem}.links a{text-decoration:none;color:var(--brand);font-weight:600}.links li:hover{border-color:var(--brand)}
+.line{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:3px solid var(--brand)}
+.line li{display:flex;flex-direction:column;gap:.1rem;padding-bottom:1.5rem;position:relative}
+.line li::before{content:"";position:absolute;left:-1.95rem;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--sun)}
+.tag{font-size:.85rem;font-weight:600;color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{display:flex;flex-direction:column;gap:.4rem;padding:1.4rem;background:var(--panel);border:1px solid var(--line);border-radius:6px;text-decoration:none;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--brand);transform:translateY(-3px)}.card p{margin:0;flex:1}.card small{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-top:1.5rem;padding-bottom:2rem;font-size:.9rem}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:0;padding-top:3rem}.wrap{padding:3rem 1.1rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.lado{display:flex;flex-direction:column;gap:1.2rem}.foto{width:100%;max-width:260px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--line);box-shadow:0 14px 30px -12px rgba(15,27,45,.35)}
+.line li p{margin:.3rem 0 0;max-width:62ch}.line li strong{font-size:1.1rem}
+.foto{width:100%;max-width:290px;aspect-ratio:1;object-fit:cover;object-position:50% 12%;border-radius:50%;align-self:center;border:5px solid var(--panel);box-shadow:0 0 0 3px var(--sun),0 18px 36px -14px rgba(15,27,45,.45)}
+.btn{display:inline-flex;align-items:center;gap:.5rem}.chips li{display:inline-flex;align-items:center;gap:.45rem}.chips li svg{color:var(--brand);font-size:1.05rem}
+.links a{display:inline-flex;align-items:center;gap:.45rem}
+.cifras{background:var(--brand);color:var(--on-brand)}.cifras .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;padding-top:2.2rem;padding-bottom:2.2rem}
+.cifra{display:flex;flex-direction:column}.cifra strong{font:800 clamp(2rem,5vw,3rem)/1 'Bricolage Grotesque',system-ui,sans-serif;color:var(--sun)}.cifra span{font-size:.95rem;opacity:.9}
+@media(max-width:760px){.cifras .wrap{grid-template-columns:repeat(2,1fr);padding:2rem 1.1rem}}
+
+/* ---- Chips: efecto al pasar el mouse (Habilidades, En formación, Aprendizaje continuo, Redes) ---- */
+.chips li{position:relative;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease}
+@media(hover:hover){
+  .chips li:hover{transform:scale(1.12) translateY(-2px);z-index:1;background:var(--brand);border-color:var(--brand);color:var(--on-brand);box-shadow:0 6px 16px color-mix(in srgb,var(--brand) 35%,transparent);cursor:default}
+  .chips li:hover svg{color:var(--on-brand)}
+  .chips.links li:hover{cursor:pointer}
+  .links li:hover a{color:var(--on-brand)}
+}
+.chips li:active{transform:scale(1.08)}
+@media(prefers-reduced-motion:reduce){.chips li:hover,.chips li:active{transform:none}}
+.line + .group{margin-top:2.5rem}
+
+/* ---- Foto responsive ---- */
+.foto{display:block;height:auto}
+@media(max-width:1000px){.hero{gap:2rem}}
+@media(max-width:760px){
+  .lado{order:-1;align-items:center}
+  .foto{max-width:220px}
+  .ficha{width:100%}
+}
+
+/* ---- Menú hamburguesa en celular ---- */
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;font-size:1.2rem;line-height:1;padding:.4rem .7rem;cursor:pointer}
+@media(max-width:760px){
+  .nav{flex-wrap:wrap}
+  .burger{display:block}
+  .nav nav{display:none;width:100%;flex-direction:column;gap:0;padding:.5rem 0 .2rem}
+  .nav nav.abierto{display:flex}
+  .nav nav a{padding:.6rem 0;border-top:1px solid var(--line)}
+}
