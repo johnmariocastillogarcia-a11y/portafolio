@@ -80,7 +80,7 @@ export default function App() {
           </ol>
           <div className="group">
             <h3>Mi ruta de aprendizaje continuo</h3>
-            <ul className="chips">{aprendizaje.map(i => <li key={i}>{i}</li>)}</ul>
+            <ul className="chips">{aprendizaje.map(i => <Chip key={i} n={i} />)}</ul>
           </div>
         </Reveal></section>
 
